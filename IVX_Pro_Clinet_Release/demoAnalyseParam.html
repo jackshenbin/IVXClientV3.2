@@ -1,0 +1,116 @@
+<head>
+    <title>demoAnalyseParamOCX</title>
+    <style type="text/css">
+        #MyDiv {
+            height: 300px;
+            width: 1000px;
+        }
+
+    </style>
+</head>
+<script>
+    //   =============基础操作==================
+
+    function ConfigAnalyseParam() {
+        alert(AnaType.value);
+        alert(AnaParam.value);
+        val = iVXSDK.ConfigAnalyseParam(AnaType.value, AnaParam.value);
+        
+        MyDiv.innerText = "ConfigAnalyseParam:" + val;
+    }
+   
+    function Clear() {
+        val = iVXSDK.Clear();
+        // alert(val);
+        MyDiv.innerText = "Clear:" + val;
+    }
+
+    function GetVersion() {
+        val = iVXSDK.GetVersion();
+        // alert(val);
+        MyDiv.innerText = "GetVersion:" + val;
+    }
+
+    function ChangeTheme() {
+        val = iVXSDK.ChangeTheme(Theme.value);
+        // alert(val);
+        MyDiv.innerText = "ChangeTheme:" + val;
+
+    }
+
+    function SetPicture() {
+        val = iVXSDK.SetPicture(PicturePath.value);
+        // alert(val);
+        MyDiv.innerText = "SetPicture:" + val;
+
+    }
+
+</script>
+
+<script language="javascript" type="text/javascript">
+    window.onbeforeunload = function (event) {
+        iVXSDK.Clear();
+    }
+</script>
+
+<script language="javascript" for="iVXSDK" type="text/javascript" event="OnFinish( isOk,  param, analyseType);">
+    //var val= document.getElementById("MyDiv2")
+    MyDiv.value += 'OnFinish isOk:' + isOk + ",param:" + param + ",analyseType:" + analyseType + "\r\n";
+</script>
+
+
+<body>
+    <table cellspacing=0 cellpadding=0 width="100%" align=center border=1>
+        <tr><td colspan="2"><h1 align=center>分析参数配置 OCX测试页面 </h1></td></tr>
+        <tr>
+            <td colspan="2" width="100%">
+                <table cellspacing=1 cellpadding=0 bgcolor=#000000 border=0 width="100%">
+                    <tr>
+                        <th bgcolor=#ffffff></th>
+                    </tr>
+                    <tr bgcolor=#ffffff>
+                       <td>
+                           AnaType：<select id="AnaType">
+                                       <option value="5">运动物</option>
+                                       <option value="257">大客流</option>
+                                    </select><br />
+                           AnaParam：
+                           <textarea id="AnaParam" rows="10" cols="80"></textarea><br />
+                           <input id="ConfigAnalyseParam" type="button" onclick="ConfigAnalyseParam()" value="初始化分析参数" />
+                           <input id="Clear" type="button" onclick="Clear()" value="清理资源" />
+                            <input id="GetVersion" type="button" onclick="GetVersion()" value="获取ocx版本号" /><br />
+                           Theme：<input id="Theme" type="text" value="Office2010Black" />
+                           <input id="ChangeTheme" type="button" onclick="ChangeTheme()" value="ChangeTheme" /><br />
+                           PicturePath：<input id="PicturePath" type="text" style="width:400px" value="\\\\192.168.88.180\\bocom\\pic\\192.168.88.180_黑牛城紫金桥上（东向西）_20151230141152987_0.avi.jpg" />
+                           <input id="SetPicture" type="button" onclick="SetPicture()" value="SetPicture" /><br />
+
+                       </td>
+                    </tr>
+
+                </table>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <table>
+                    <tr>
+                        <td>
+                            <object id="iVXSDK" classid="clsid:0D834663-6398-4B04-A8F6-A7AB8847A3B3" width="100%"  height="600">  brief 控件未加载 </object>
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id=''>
+                                <textarea id="MyDiv" name="S1"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>

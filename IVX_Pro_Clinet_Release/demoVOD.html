@@ -1,0 +1,130 @@
+<head>
+    <title>demoVODOCX</title>
+    <style type="text/css">
+        #MyDiv {
+            height: 300px;
+            width: 1000px;
+        }
+
+    </style>
+</head>
+<script>
+    //   =============基础操作==================
+
+    function CreateVOD() {
+        val = iVXSDK.CreateVOD(MssIP.value, MssPort.value, VideoPath.value, 0, 0);
+        MyDiv.innerText = "CreateVOD:" + val;
+    }
+   
+    function Clear() {
+        val = iVXSDK.Clear();
+        // alert(val);
+        MyDiv.innerText = "Clear:" + val;
+    }
+
+    function GetVersion() {
+        val = iVXSDK.GetVersion();
+        // alert(val);
+        MyDiv.innerText = "GetVersion:" + val;
+    }
+
+    function ChangeTheme() {
+        val = iVXSDK.ChangeTheme(Theme.value);
+        // alert(val);
+        MyDiv.innerText = "ChangeTheme:" + val;
+
+    }
+
+    function SetDefaultPath() {
+        val = iVXSDK.VdaSetSavePictureAndVideoDefaultPath(DefaultPath.value);
+        // alert(val);
+        MyDiv.innerText = "SetSaveDefaultPath:" + val;
+
+    }
+
+    function StopVideoSave() {
+        val = iVXSDK_base.StopVideoSave(SaveHandle.value);
+        MyDiv.innerText = "StopVideoSave:" + val;
+    }
+</script>
+
+<script language="javascript" type="text/javascript">
+    window.onbeforeunload = function (event) {
+        alert("onbeforeunload 1");
+        iVXSDK.Clear();
+        alert("onbeforeunload 2");
+    }
+</script>
+
+<script language="javascript" for="iVXSDK" type="text/javascript" event="OnPictureSaved(fileSavePath,  formType);">
+    //var val= document.getElementById("MyDiv2")
+    MyDiv.value += 'OnPictureSaved fileSavePath:' + fileSavePath + ",formType:" + formType + "\r\n";
+</script>
+<script language="javascript" for="iVXSDK" type="text/javascript" event="OnVideoSaveStarted( handel, fileSavePath);">
+    //var val= document.getElementById("MyDiv2")
+    MyDiv.value += 'OnVideoSaveStarted fileSavePath:' + fileSavePath + ",handel:" + handel + "\r\n";
+    document.getElementById("SaveHandle").value = handel;
+</script>
+<script language="javascript" for="iVXSDK" type="text/javascript" event="OnVideoSaveProgress( handel,  fileSavePath,  progress);">
+    //var val= document.getElementById("MyDiv2")
+    MyDiv.value += 'OnVideoSaveProgress fileSavePath:' + fileSavePath + ",handel:" + handel + ",progress:" + progress + "\r\n";
+</script>
+<script language="javascript" for="iVXSDK" type="text/javascript" event="OnVideoSaveFinished( handel,  fileSavePath,  finishType);">
+    //var val= document.getElementById("MyDiv2")
+    MyDiv.value += 'OnVideoSaveFinished fileSavePath:' + fileSavePath + ",handel:" + handel + ",finishType:" + finishType + "\r\n";
+</script>
+
+<body>
+    <table cellspacing=0 cellpadding=0 width="100%" align=center border=1>
+        <tr><td colspan="2"><h1 align=center>视频回溯 OCX测试页面 </h1></td></tr>
+        <tr>
+            <td colspan="2" width="100%">
+                <table cellspacing=1 cellpadding=0 bgcolor=#000000 border=0 width="100%">
+                    <tr>
+                        <th bgcolor=#ffffff></th>
+                    </tr>
+                    <tr bgcolor=#ffffff>
+                       <td>
+                           MssIP：<input id="MssIP" type="text" value="192.168.88.198" />
+                           MssPort：<input id="MssPort" type="text" value="9101" /><br />
+                           VideoPath：<input id="VideoPath" type="text" style="width:600px" value="D:\OriginalFile\20161115\Video\0001\4BE1AFA3-A1FD-42F9-8F67-D910C0207AC9.avi" /><br />
+                           <input id="CreateVOD" type="button" onclick="CreateVOD()" value="初始化播放" />
+                           <input id="Clear" type="button" onclick="Clear()" value="清理资源" />
+                            <input id="GetVersion" type="button" onclick="GetVersion()" value="获取ocx版本号" /><br />
+                           Theme：<input id="Theme" type="text" value="Office2010Black" />
+                           <input id="ChangeTheme" type="button" onclick="ChangeTheme()" value="ChangeTheme" /><br />
+                           DefaultPath：<input id="DefaultPath" type="text" value="c:\\" />
+                           <input id="SetDefaultPath" type="button" onclick="SetDefaultPath()" value="SetDefaultPath" /><br />
+                           SaveHandle：<input id="SaveHandle" type="text" value="0" />
+                           <input id="StopVideoSave" type="button" onclick="StopVideoSave()" value="StopVideoSave" /><br />
+
+                       </td>
+                    </tr>
+
+                </table>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <table>
+                    <tr>
+                        <td>
+                            <object id="iVXSDK" classid="clsid:B2CBE0DC-75CA-4458-9E5C-6584C2FE9552" width="100%" height="600">vod 控件未加载</object>
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id=''>
+                                <textarea id="MyDiv" name="S1"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>

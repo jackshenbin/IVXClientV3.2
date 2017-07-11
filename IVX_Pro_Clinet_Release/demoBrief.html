@@ -1,0 +1,120 @@
+<head>
+    <title>demoBriefOCX</title>
+    <style type="text/css">
+        #MyDiv {
+            height: 300px;
+            width: 1000px;
+        }
+
+    </style>
+</head>
+<script>
+    //   =============基础操作==================
+
+    function CreateBrief() {
+        val = iVXSDK.CreateBrief(MssIP.value, MssPort.value, BriefIndexPath.value, BriefDataPath.value, VideoLenth.value,AdjustTime.value);
+        MyDiv.innerText = "CreateBrief:" + val;
+    }
+   
+    function Clear() {
+        val = iVXSDK.Clear();
+        // alert(val);
+        MyDiv.innerText = "Clear:" + val;
+    }
+
+    function GetVersion() {
+        val = iVXSDK.GetVersion();
+        // alert(val);
+        MyDiv.innerText = "GetVersion:" + val;
+    }
+
+    function ChangeTheme() {
+        val = iVXSDK.ChangeTheme(Theme.value);
+        // alert(val);
+        MyDiv.innerText = "ChangeTheme:" + val;
+
+    }
+
+    function SetDefaultPath() {
+        val = iVXSDK.VdaSetSavePictureAndVideoDefaultPath(DefaultPath.value);
+        // alert(val);
+        MyDiv.innerText = "SetSaveDefaultPath:" + val;
+
+    }
+
+</script>
+
+<script language="javascript" type="text/javascript">
+    window.onbeforeunload = function (event) {
+        iVXSDK.Clear();
+    }
+</script>
+
+<script language="javascript" for="iVXSDK" type="text/javascript" event="OnBriefObjectPlayBackNote(MoveObjID,MoveObjType,MoveObjColor,BeginTimeS,EndTimeS);">
+    //var val= document.getElementById("MyDiv2")
+    MyDiv.value += 'OnBriefObjectPlayBackNote MoveObjID:' + MoveObjID + ",MoveObjType:" + MoveObjType + ",MoveObjColor:" + MoveObjColor + ",BeginTimeS:" + BeginTimeS + ",EndTimeS:" + EndTimeS + "\r\n";
+</script>
+
+<script language="javascript" for="iVXSDK" type="text/javascript" event="OnPictureSaved(fileSavePath,  formType);">
+    //var val= document.getElementById("MyDiv2")
+    MyDiv.value += 'OnPictureSaved fileSavePath:' + fileSavePath + ",formType:" + formType + "\r\n";
+</script>
+
+<body>
+    <table cellspacing=0 cellpadding=0 width="100%" align=center border=1>
+        <tr><td colspan="2"><h1 align=center>摘要 OCX测试页面 </h1></td></tr>
+        <tr>
+            <td colspan="2" width="100%">
+                <table cellspacing=1 cellpadding=0 bgcolor=#000000 border=0 width="100%">
+                    <tr>
+                        <th bgcolor=#ffffff></th>
+                    </tr>
+                    <tr bgcolor=#ffffff>
+                       <td>
+                           MssIP：<input id="MssIP" type="text" value="192.168.88.198" />
+                           MssPort：<input id="MssPort" type="text" value="9301" /><br />
+                           VideoLenth：<input id="VideoLenth" type="text" value="863" />
+                           AdjustTime：<input id="AdjustTime" type="text" value="1464838309" /><br />
+                           BriefIndexPath：<input id="BriefIndexPath" type="text" style="width:600px" value="G:\AnalyzeResult\20160706\virtualcamera_77\Brief\BriefIndex\0001\BAAA83F7-D2A5-4E37-B7E2-B34D8800B31D.index" /><br />
+                           BriefDataPath：<input id="BriefDataPath" type="text" style="width:600px" value="G:\AnalyzeResult\20160706\virtualcamera_77\Brief\BriefData\0001\8C6D4B62-BF09-4C22-84F9-8F35192CD4A4.data" /><br />
+                           <input id="CreateBrief" type="button" onclick="CreateBrief()" value="初始化摘要" />
+                           <input id="Clear" type="button" onclick="Clear()" value="清理资源" />
+                            <input id="GetVersion" type="button" onclick="GetVersion()" value="获取ocx版本号" /><br />
+                           Theme：<input id="Theme" type="text" value="Office2010Black" />
+                           <input id="ChangeTheme" type="button" onclick="ChangeTheme()" value="ChangeTheme" /><br />
+                           DefaultPath：<input id="DefaultPath" type="text" value="c:\\" />
+                           <input id="SetDefaultPath" type="button" onclick="SetDefaultPath()" value="SetDefaultPath" /><br />
+
+                       </td>
+                    </tr>
+
+                </table>
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td valign="top">
+                <table>
+                    <tr>
+                        <td>
+                            <object id="iVXSDK" classid="clsid:A9D034E4-6D6C-4819-B9F9-E0070D36D192" width="100%"
+                                    height="600">
+                                brief 控件未加载
+                            </object>
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id=''>
+                                <textarea id="MyDiv" name="S1"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+
+</body>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0"?>
+<configuration>
+  <menu name="任务管理">
+    <sub url="FormTaskManagementMA" des="展示离线分析任务列表" role ="3">历史任务列表</sub>
+    <sub url="FormRealtimeTaskManagementMA" des="展示在线分析任务列表" role ="3">实时任务列表</sub>
+    <!--<sub url="FormScheduleTaskManagement" des="展示计划分析任务列表" >计划分析任务列表</sub>-->
+    <sub url="FormGisMap" des="地图选点添加" role ="3">电子地图</sub>
+  </menu>
+  <menu name="实时报警">
+    <sub url="FormTrafficEventAlarm" des="交通事件" role ="3">交通事件</sub>
+    <sub url="FormBehaviourEventAlarm" des="行为事件" role ="3">行为事件</sub>
+    <!--<sub url="FormAlarmHistory" des="历史报警检索" >历史报警检索</sub>-->
+  </menu>
+  <menu name="智能检索">
+    <sub url="FormVehicleSearch" des="车辆检索" role ="3">车辆检索</sub>
+    <sub url="FormAllMoveObjSearch" des="全检索" role ="3">全检索</sub>
+    <sub url="FormPeopleSearch" des="行人检索" role ="3">行人检索</sub>
+  </menu>
+  <menu name="交通事件">
+    <sub url="FormTrafficEventSearch" des="历史交通事件" role ="3">历史交通事件</sub>
+    <sub url="FormTrafficFluxSearch" des="历史交通流量" role ="3">历史交通流量</sub>
+    <sub url="FormTrafficFluxStatisticSearch" des="统计交通流量" role ="3">统计交通流量</sub>
+  </menu>
+<menu name="人脸分析">
+    <sub url="FormFaceAlarm" des="人脸实时报警" role ="3">人脸实时报警</sub>
+    <sub url="FormFaceAlarmControl" des="人脸布控" role ="3">人脸布控</sub>
+    <sub url="FormFaceAlarmSearch" des="人脸布控历史数据" role ="3">人脸布控历史数据</sub>
+    <sub url="FormFaceHistorySearch" des="人脸历史数据" role ="3">人脸历史数据</sub>
+    <sub url="FormBlackList" des="人脸黑名单" role ="3">人脸黑名单</sub>
+  </menu>
+  <menu name="大客流">
+    <sub url="FormCrowdReatime" des="实时大客流" role ="3">实时大客流</sub>
+    <sub url="FormCrowdHistory" des="历史大客流" role ="3">历史大客流</sub>
+    <sub url="FormCrowdReport" des="大客流统计" role ="3">大客流统计</sub>
+  </menu>
+  <menu name="行为">
+    <sub url="FormBehaviorEventSearch" des="历史行为事件" role ="3">历史行为事件</sub>
+  </menu>
+  <menu name="系统设置">
+    <sub url="FormSettingServer" des="服务器设置" role ="1">服务器设置</sub>
+    <sub url="FormSettingCamera" des="平台及相机设置" role ="1">平台及相机设置</sub>
+    <sub url="FormLogSearch" des="日志管理" role ="3">日志管理</sub>
+    <sub url="FormUserManager" des="用户管理" role ="1">用户管理</sub>
+    <!--<sub url="FormLocalSetting" des="本地参数设置" >本地参数设置</sub>-->
+  </menu>
+</configuration>
