@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WSDL:definitions xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/" xmlns:tns="http://15.25.67.35:9001/BocomMatchService.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:bocom="http://15.25.67.35:9001/BocomMatchService.wsdl" name="matchservice" targetNamespace="http://15.25.67.35:9001/BocomMatchService.wsdl" xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/">
+  <WSDL:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://15.25.67.35:9001/BocomMatchService.wsdl">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:element name="MatchServiceReq">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="strReqType" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="strReq" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MatchServiceReqResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="strRsp" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </WSDL:types>
+  <WSDL:message name="MatchServiceReqRequest">
+    <WSDL:part name="parameters" element="bocom:MatchServiceReq" />
+  </WSDL:message>
+  <WSDL:message name="MatchServiceReqResponse">
+    <WSDL:part name="parameters" element="bocom:MatchServiceReqResponse" />
+  </WSDL:message>
+  <WSDL:portType name="matchservicePortType">
+    <WSDL:operation name="MatchServiceReq">
+      <documentation>Service definition of function bocom__MatchServiceReq</documentation>
+      <WSDL:input message="bocom:MatchServiceReqRequest" />
+      <WSDL:output message="bocom:MatchServiceReqResponse" />
+    </WSDL:operation>
+  </WSDL:portType>
+  <WSDL:binding name="matchservice" type="bocom:matchservicePortType">
+    <SOAP:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <WSDL:operation name="MatchServiceReq">
+      <SOAP:operation soapAction="" />
+      <WSDL:input>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:input>
+      <WSDL:output>
+        <SOAP:body use="literal" parts="parameters" />
+      </WSDL:output>
+    </WSDL:operation>
+  </WSDL:binding>
+  <WSDL:service name="matchservice">
+    <documentation>gSOAP 2.8.9 generated service definition</documentation>
+    <WSDL:port name="matchservice" binding="bocom:matchservice">
+      <SOAP:address location="http://15.25.67.35:9001" />
+    </WSDL:port>
+  </WSDL:service>
+</WSDL:definitions>

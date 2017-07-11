@@ -1,0 +1,1585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9947B3EC-B31C-42CD-BD95-316812079ACF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IVX.Live.MainForm</RootNamespace>
+    <AssemblyName>IVX.Live.MainForm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\IVX_Pro_Clinet_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\IVX.Live.MainForm.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\IVX_Pro_Clinet_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\IVX.Live.MainForm.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IVX.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design, Version=11.0.0.4, Culture=neutral, PublicKeyToken=2c9ff1fddc42653c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\DotNetBar.Dll_11004_Cracked\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.4, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\DotNetBar.Dll_11004_Cracked\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>..\..\..\..\..\..\..\..\..\软件安装\net控件\DotNetBar.Dll_11004_Cracked\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation.Design">
+      <HintPath>..\..\..\ThirdParty\DotNetBar.Dll_11004_Cracked\DevComponents.Instrumentation.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="ftplib">
+      <HintPath>..\..\..\ThirdParty\ftplib.dll</HintPath>
+    </Reference>
+    <Reference Include="Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\cfgLib\Log.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TimeTrackControl">
+      <HintPath>..\..\..\ThirdParty\TimeTrackControl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataGridViewCalendarColumn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBriefTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBriefTest.Designer.cs">
+      <DependentUpon>FormBriefTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOP.Designer.cs">
+      <DependentUpon>FormOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Freamwork\Environment.cs" />
+    <Compile Include="IAnalyseSetting.cs" />
+    <Compile Include="Service\VideoExportService.cs" />
+    <Compile Include="ucAnalysePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAnalysePicker.Designer.cs">
+      <DependentUpon>ucAnalysePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucOPMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOPMain.Designer.cs">
+      <DependentUpon>ucOPMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddEditFaceSubscribe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddEditFaceSubscribe.Designer.cs">
+      <DependentUpon>FormAddEditFaceSubscribe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddEditFaceControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddEditFaceControl.Designer.cs">
+      <DependentUpon>FormAddEditFaceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBalckItemAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBalckItemAdd.Designer.cs">
+      <DependentUpon>FormBalckItemAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBlackList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBlackList.Designer.cs">
+      <DependentUpon>FormBlackList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBlackListAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBlackListAdd.Designer.cs">
+      <DependentUpon>FormBlackListAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBlackPicAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBlackPicAdd.Designer.cs">
+      <DependentUpon>FormBlackPicAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBlackPicsAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBlackPicsAdd.Designer.cs">
+      <DependentUpon>FormBlackPicsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceAlarmControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceAlarmControl.Designer.cs">
+      <DependentUpon>FormFaceAlarmControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceAlarmSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceAlarmSearch.Designer.cs">
+      <DependentUpon>FormFaceAlarmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceAlarm.Designer.cs">
+      <DependentUpon>FormFaceAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceComparaParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceComparaParam.Designer.cs">
+      <DependentUpon>FormFaceComparaParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceDetailInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceDetailInfo.Designer.cs">
+      <DependentUpon>FormFaceDetailInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceHistorySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceHistorySearch.Designer.cs">
+      <DependentUpon>FormFaceHistorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceSearch.Designer.cs">
+      <DependentUpon>FormFaceSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddEditFaceBlacklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddEditFaceBlacklist.Designer.cs">
+      <DependentUpon>FormAddEditFaceBlacklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddUser.Designer.cs">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBehaviorEventSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBehaviorEventSearch.Designer.cs">
+      <DependentUpon>FormBehaviorEventSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormEditRealtimeAnalyseParamNoDIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEditRealtimeAnalyseParamNoDIO.Designer.cs">
+      <DependentUpon>FormEditRealtimeAnalyseParamNoDIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormMdfPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMdfPwd.Designer.cs">
+      <DependentUpon>FormMdfPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRealtimeTaskManagementMA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRealtimeTaskManagementMA.Designer.cs">
+      <DependentUpon>FormRealtimeTaskManagementMA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormReBootSer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormReBootSer.Designer.cs">
+      <DependentUpon>FormReBootSer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormFaceBlacklist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormFaceBlacklist.Designer.cs">
+      <DependentUpon>FormFaceBlacklist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSettingCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSettingCamera.Designer.cs">
+      <DependentUpon>FormSettingCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSingleBehaviourEvnetDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSingleBehaviourEvnetDetail.Designer.cs">
+      <DependentUpon>FormSingleBehaviourEvnetDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBehaviourEventAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBehaviourEventAlarm.Designer.cs">
+      <DependentUpon>FormBehaviourEventAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSingleFaceAlarmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSingleFaceAlarmInfo.Designer.cs">
+      <DependentUpon>FormSingleFaceAlarmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTaskManagementMA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTaskManagementMA.Designer.cs">
+      <DependentUpon>FormTaskManagementMA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormUserInfoSingle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormUserInfoSingle.Designer.cs">
+      <DependentUpon>FormUserInfoSingle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormUserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormUserManager.Designer.cs">
+      <DependentUpon>FormUserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucBehaviorEventSearch.cs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucBehaviorEventSearch.cs.Designer.cs">
+      <DependentUpon>ucBehaviorEventSearch.cs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucBlackList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucBlackList.Designer.cs">
+      <DependentUpon>ucBlackList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucBlackPicbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucBlackPicbox.Designer.cs">
+      <DependentUpon>ucBlackPicbox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFaceAlarmSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFaceAlarmSearch.Designer.cs">
+      <DependentUpon>ucFaceAlarmSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFaceHistorySearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFaceHistorySearch.Designer.cs">
+      <DependentUpon>ucFaceHistorySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFaceHistorySearchResultPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFaceHistorySearchResultPanel.Designer.cs">
+      <DependentUpon>ucFaceHistorySearchResultPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFaceSearchResultPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFaceSearchResultPanel.Designer.cs">
+      <DependentUpon>ucFaceSearchResultPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucRebootSer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucRebootSer.Designer.cs">
+      <DependentUpon>ucRebootSer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucBehaviourEventAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucBehaviourEventAlarm.Designer.cs">
+      <DependentUpon>ucBehaviourEventAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTaskTreeBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTaskTreeBase.Designer.cs">
+      <DependentUpon>ucTaskTreeBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucUserManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucUserManager.Designer.cs">
+      <DependentUpon>ucUserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddEditNetStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddEditNetStore.Designer.cs">
+      <DependentUpon>FormAddEditNetStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddEditCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddEditCamera.Designer.cs">
+      <DependentUpon>FormAddEditCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormChannelTrafficEventSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormChannelTrafficEventSetting.Designer.cs">
+      <DependentUpon>FormChannelTrafficEventSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddEditTransEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddEditTransEvent.Designer.cs">
+      <DependentUpon>FormAddEditTransEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddRealTaskNoDIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddRealTaskNoDIO.Designer.cs">
+      <DependentUpon>FormAddRealTaskNoDIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormLogSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLogSearch.Designer.cs">
+      <DependentUpon>FormLogSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSingleTrafficPlateDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSingleTrafficPlateDetail.Designer.cs">
+      <DependentUpon>FormSingleTrafficPlateDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormCrowdHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCrowdHistory.Designer.cs">
+      <DependentUpon>FormCrowdHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormCrowdReatime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCrowdReatime.Designer.cs">
+      <DependentUpon>FormCrowdReatime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormCrowdReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCrowdReport.Designer.cs">
+      <DependentUpon>FormCrowdReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormEditRealtimeAnalyseParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEditRealtimeAnalyseParam.Designer.cs">
+      <DependentUpon>FormEditRealtimeAnalyseParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormEditHistoryAnalyseParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormEditHistoryAnalyseParam.Designer.cs">
+      <DependentUpon>FormEditHistoryAnalyseParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddEditServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddEditServer.Designer.cs">
+      <DependentUpon>FormAddEditServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSingleTrafficEventDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSingleTrafficEventDetail.Designer.cs">
+      <DependentUpon>FormSingleTrafficEventDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTrafficEventAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTrafficEventAlarm.Designer.cs">
+      <DependentUpon>FormTrafficEventAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTrafficEventSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTrafficEventSearch.Designer.cs">
+      <DependentUpon>FormTrafficEventSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTrafficFluxSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTrafficFluxSearch.Designer.cs">
+      <DependentUpon>FormTrafficFluxSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTrafficFluxStatisticSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTrafficFluxStatisticSearch.Designer.cs">
+      <DependentUpon>FormTrafficFluxStatisticSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormTransEventList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormTransEventList.Designer.cs">
+      <DependentUpon>FormTransEventList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAllMoveObjSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAllMoveObjSearch.Designer.cs">
+      <DependentUpon>FormAllMoveObjSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormVehicleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormVehicleSearch.Designer.cs">
+      <DependentUpon>FormVehicleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSelectCompareParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSelectCompareParam.Designer.cs">
+      <DependentUpon>FormSelectCompareParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSelectSearchItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSelectSearchItem.Designer.cs">
+      <DependentUpon>FormSelectSearchItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPlayRealtime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPlayRealtime.Designer.cs">
+      <DependentUpon>FormPlayRealtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSingleSearchDitailResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSingleSearchDitailResult.Designer.cs">
+      <DependentUpon>FormSingleSearchDitailResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPeopleSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPeopleSearch.Designer.cs">
+      <DependentUpon>FormPeopleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSingleRealtimeTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSingleRealtimeTask.Designer.cs">
+      <DependentUpon>FormSingleRealtimeTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCrowdHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCrowdHistory.Designer.cs">
+      <DependentUpon>ucCrowdHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCrowdRealtime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCrowdRealtime.Designer.cs">
+      <DependentUpon>ucCrowdRealtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCrowdReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCrowdReport.Designer.cs">
+      <DependentUpon>ucCrowdReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCrowdSingleHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCrowdSingleHistory.Designer.cs">
+      <DependentUpon>ucCrowdSingleHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCrowdSingleReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCrowdSingleReport.Designer.cs">
+      <DependentUpon>ucCrowdSingleReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucLogSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucLogSearch.Designer.cs">
+      <DependentUpon>ucLogSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucPeopleCountAnalyseSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucPeopleCountAnalyseSetting.Designer.cs">
+      <DependentUpon>ucPeopleCountAnalyseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucBehaviourAnalyseSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucBehaviourAnalyseSetting.Designer.cs">
+      <DependentUpon>ucBehaviourAnalyseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucAllMoveObjSearchSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucAllMoveObjSearchSetting.Designer.cs">
+      <DependentUpon>ucAllMoveObjSearchSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleCrowdInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleCrowdInfo.Designer.cs">
+      <DependentUpon>ucSingleCrowdInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrafficEventSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrafficEventSearch.Designer.cs">
+      <DependentUpon>ucTrafficEventSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrafficEventTaskFileSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrafficEventTaskFileSystem.Designer.cs">
+      <DependentUpon>ucTrafficEventTaskFileSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucMoveObjAnalyseSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucMoveObjAnalyseSetting.Designer.cs">
+      <DependentUpon>ucMoveObjAnalyseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucEditTaskAnalyseParam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucEditTaskAnalyseParam.Designer.cs">
+      <DependentUpon>ucEditTaskAnalyseParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPlayBriefNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPlayBriefNew.Designer.cs">
+      <DependentUpon>FormPlayBriefNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormExportVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormExportVideo.Designer.cs">
+      <DependentUpon>FormExportVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPlayHistoryNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPlayHistoryNew.Designer.cs">
+      <DependentUpon>FormPlayHistoryNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormExportList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormExportList.Designer.cs">
+      <DependentUpon>FormExportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFaceAnalyseSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFaceAnalyseSetting.Designer.cs">
+      <DependentUpon>ucFaceAnalyseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucExportVideo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucExportVideo.Designer.cs">
+      <DependentUpon>ucExportVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrafficEventAlarm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrafficEventAlarm.Designer.cs">
+      <DependentUpon>ucTrafficEventAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSearchSettingBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSearchSettingBase.Designer.cs">
+      <DependentUpon>ucSearchSettingBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucPlayRealtime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucPlayRealtime.Designer.cs">
+      <DependentUpon>ucPlayRealtime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucPlayHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucPlayHistory.Designer.cs">
+      <DependentUpon>ucPlayHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucPlayBrief.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucPlayBrief.Designer.cs">
+      <DependentUpon>ucPlayBrief.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\VideoExport.cs" />
+    <Compile Include="View\ucSearchResultPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSearchResultPanel.Designer.cs">
+      <DependentUpon>ucSearchResultPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleSearchResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleSearchResult.Designer.cs">
+      <DependentUpon>ucSingleSearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleSearchResultPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleSearchResultPanel.Designer.cs">
+      <DependentUpon>ucSingleSearchResultPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleRealtimeTask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleRealtimeTask.Designer.cs">
+      <DependentUpon>ucSingleRealtimeTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleHistoryTask.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleHistoryTask.Designer.cs">
+      <DependentUpon>ucSingleHistoryTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UILogics\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FilterableTreeList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\FormAddRealTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddRealTask.Designer.cs">
+      <DependentUpon>FormAddRealTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSettingServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSettingServer.Designer.cs">
+      <DependentUpon>FormSettingServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormSingleTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormSingleTask.Designer.cs">
+      <DependentUpon>FormSingleTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UILogics\ContentPageController.cs" />
+    <Compile Include="View\FormAddFtpTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddFtpTask.Designer.cs">
+      <DependentUpon>FormAddFtpTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleDrawImageWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleDrawImageWnd.Designer.cs">
+      <DependentUpon>ucSingleDrawImageWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleRealtimePlayWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleRealtimePlayWnd.Designer.cs">
+      <DependentUpon>ucSingleRealtimePlayWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSinglePlayWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSinglePlayWnd.Designer.cs">
+      <DependentUpon>ucSinglePlayWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTaskAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTaskAdd.Designer.cs">
+      <DependentUpon>ucTaskAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFileSystemBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFileSystemBase.Designer.cs">
+      <DependentUpon>ucFileSystemBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucFtpFileSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucFtpFileSystem.Designer.cs">
+      <DependentUpon>ucFtpFileSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucLocalFileSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucLocalFileSystem.Designer.cs">
+      <DependentUpon>ucLocalFileSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormAddLocalTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormAddLocalTask.Designer.cs">
+      <DependentUpon>FormAddLocalTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrafficFluxSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrafficFluxSearch.Designer.cs">
+      <DependentUpon>ucTrafficFluxSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrafficFluxStatisticSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrafficFluxStatisticSearch.Designer.cs">
+      <DependentUpon>ucTrafficFluxStatisticSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucUploadWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucUploadWnd.Designer.cs">
+      <DependentUpon>ucUploadWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucTrafficEventAnalyseSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucTrafficEventAnalyseSetting.Designer.cs">
+      <DependentUpon>ucTrafficEventAnalyseSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucPersonSearchSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucPersonSearchSetting.Designer.cs">
+      <DependentUpon>ucPersonSearchSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucVehicleSearchSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucVehicleSearchSetting.Designer.cs">
+      <DependentUpon>ucVehicleSearchSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainNew.Designer.cs">
+      <DependentUpon>FormMainNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucSingleBriefPlayWnd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucSingleBriefPlayWnd.Designer.cs">
+      <DependentUpon>ucSingleBriefPlayWnd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormGisMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormGisMap.Designer.cs">
+      <DependentUpon>FormGisMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ucCrowdAnalyseSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ucCrowdAnalyseSetting.Designer.cs">
+      <DependentUpon>ucCrowdAnalyseSetting.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBriefTest.resx">
+      <DependentUpon>FormBriefTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOP.resx">
+      <DependentUpon>FormOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucAnalysePicker.resx">
+      <DependentUpon>ucAnalysePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOPMain.resx">
+      <DependentUpon>ucOPMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddEditFaceSubscribe.resx">
+      <DependentUpon>FormAddEditFaceSubscribe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddEditFaceControl.resx">
+      <DependentUpon>FormAddEditFaceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBalckItemAdd.resx">
+      <DependentUpon>FormBalckItemAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBlackList.resx">
+      <DependentUpon>FormBlackList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBlackListAdd.resx">
+      <DependentUpon>FormBlackListAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBlackPicAdd.resx">
+      <DependentUpon>FormBlackPicAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBlackPicsAdd.resx">
+      <DependentUpon>FormBlackPicsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceAlarmControl.resx">
+      <DependentUpon>FormFaceAlarmControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceAlarmSearch.resx">
+      <DependentUpon>FormFaceAlarmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceAlarm.resx">
+      <DependentUpon>FormFaceAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceComparaParam.resx">
+      <DependentUpon>FormFaceComparaParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceDetailInfo.resx">
+      <DependentUpon>FormFaceDetailInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceHistorySearch.resx">
+      <DependentUpon>FormFaceHistorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceSearch.resx">
+      <DependentUpon>FormFaceSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddEditFaceBlacklist.resx">
+      <DependentUpon>FormAddEditFaceBlacklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddUser.resx">
+      <DependentUpon>FormAddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBehaviorEventSearch.resx">
+      <DependentUpon>FormBehaviorEventSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEditRealtimeAnalyseParamNoDIO.resx">
+      <DependentUpon>FormEditRealtimeAnalyseParamNoDIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMdfPwd.resx">
+      <DependentUpon>FormMdfPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRealtimeTaskManagementMA.resx">
+      <DependentUpon>FormRealtimeTaskManagementMA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormReBootSer.resx">
+      <DependentUpon>FormReBootSer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormFaceBlacklist.resx">
+      <DependentUpon>FormFaceBlacklist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSettingCamera.resx">
+      <DependentUpon>FormSettingCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSingleBehaviourEvnetDetail.resx">
+      <DependentUpon>FormSingleBehaviourEvnetDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBehaviourEventAlarm.resx">
+      <DependentUpon>FormBehaviourEventAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSingleFaceAlarmInfo.resx">
+      <DependentUpon>FormSingleFaceAlarmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTaskManagementMA.resx">
+      <DependentUpon>FormTaskManagementMA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormUserInfoSingle.resx">
+      <DependentUpon>FormUserInfoSingle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormUserManager.resx">
+      <DependentUpon>FormUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucBehaviorEventSearch.cs.resx">
+      <DependentUpon>ucBehaviorEventSearch.cs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucBlackList.resx">
+      <DependentUpon>ucBlackList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucBlackPicbox.resx">
+      <DependentUpon>ucBlackPicbox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFaceAlarmSearch.resx">
+      <DependentUpon>ucFaceAlarmSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFaceHistorySearch.resx">
+      <DependentUpon>ucFaceHistorySearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFaceHistorySearchResultPanel.resx">
+      <DependentUpon>ucFaceHistorySearchResultPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFaceSearchResultPanel.resx">
+      <DependentUpon>ucFaceSearchResultPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucRebootSer.resx">
+      <DependentUpon>ucRebootSer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucBehaviourEventAlarm.resx">
+      <DependentUpon>ucBehaviourEventAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTaskTreeBase.resx">
+      <DependentUpon>ucTaskTreeBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucUserManager.resx">
+      <DependentUpon>ucUserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddEditNetStore.resx">
+      <DependentUpon>FormAddEditNetStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddEditCamera.resx">
+      <DependentUpon>FormAddEditCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormChannelTrafficEventSetting.resx">
+      <DependentUpon>FormChannelTrafficEventSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddEditTransEvent.resx">
+      <DependentUpon>FormAddEditTransEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddRealTaskNoDIO.resx">
+      <DependentUpon>FormAddRealTaskNoDIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLogSearch.resx">
+      <DependentUpon>FormLogSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSingleTrafficPlateDetail.resx">
+      <DependentUpon>FormSingleTrafficPlateDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCrowdHistory.resx">
+      <DependentUpon>FormCrowdHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCrowdReatime.resx">
+      <DependentUpon>FormCrowdReatime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCrowdReport.resx">
+      <DependentUpon>FormCrowdReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEditRealtimeAnalyseParam.resx">
+      <DependentUpon>FormEditRealtimeAnalyseParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormEditHistoryAnalyseParam.resx">
+      <DependentUpon>FormEditHistoryAnalyseParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddEditServer.resx">
+      <DependentUpon>FormAddEditServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSingleTrafficEventDetail.resx">
+      <DependentUpon>FormSingleTrafficEventDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTrafficEventAlarm.resx">
+      <DependentUpon>FormTrafficEventAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTrafficEventSearch.resx">
+      <DependentUpon>FormTrafficEventSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTrafficFluxSearch.resx">
+      <DependentUpon>FormTrafficFluxSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTrafficFluxStatisticSearch.resx">
+      <DependentUpon>FormTrafficFluxStatisticSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormTransEventList.resx">
+      <DependentUpon>FormTransEventList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAllMoveObjSearch.resx">
+      <DependentUpon>FormAllMoveObjSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormVehicleSearch.resx">
+      <DependentUpon>FormVehicleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSelectCompareParam.resx">
+      <DependentUpon>FormSelectCompareParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSelectSearchItem.resx">
+      <DependentUpon>FormSelectSearchItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPlayRealtime.resx">
+      <DependentUpon>FormPlayRealtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSingleSearchDitailResult.resx">
+      <DependentUpon>FormSingleSearchDitailResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPeopleSearch.resx">
+      <DependentUpon>FormPeopleSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSingleRealtimeTask.resx">
+      <DependentUpon>FormSingleRealtimeTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCrowdHistory.resx">
+      <DependentUpon>ucCrowdHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCrowdRealtime.resx">
+      <DependentUpon>ucCrowdRealtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCrowdReport.resx">
+      <DependentUpon>ucCrowdReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCrowdSingleHistory.resx">
+      <DependentUpon>ucCrowdSingleHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCrowdSingleReport.resx">
+      <DependentUpon>ucCrowdSingleReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucLogSearch.resx">
+      <DependentUpon>ucLogSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucPeopleCountAnalyseSetting.resx">
+      <DependentUpon>ucPeopleCountAnalyseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucBehaviourAnalyseSetting.resx">
+      <DependentUpon>ucBehaviourAnalyseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucAllMoveObjSearchSetting.resx">
+      <DependentUpon>ucAllMoveObjSearchSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleCrowdInfo.resx">
+      <DependentUpon>ucSingleCrowdInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrafficEventSearch.resx">
+      <DependentUpon>ucTrafficEventSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrafficEventTaskFileSystem.resx">
+      <DependentUpon>ucTrafficEventTaskFileSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucMoveObjAnalyseSetting.resx">
+      <DependentUpon>ucMoveObjAnalyseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucEditTaskAnalyseParam.resx">
+      <DependentUpon>ucEditTaskAnalyseParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPlayBriefNew.resx">
+      <DependentUpon>FormPlayBriefNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormExportVideo.resx">
+      <DependentUpon>FormExportVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPlayHistoryNew.resx">
+      <DependentUpon>FormPlayHistoryNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormExportList.resx">
+      <DependentUpon>FormExportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFaceAnalyseSetting.resx">
+      <DependentUpon>ucFaceAnalyseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucExportVideo.resx">
+      <DependentUpon>ucExportVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrafficEventAlarm.resx">
+      <DependentUpon>ucTrafficEventAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSearchSettingBase.resx">
+      <DependentUpon>ucSearchSettingBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucPlayRealtime.resx">
+      <DependentUpon>ucPlayRealtime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucPlayHistory.resx">
+      <DependentUpon>ucPlayHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucPlayBrief.resx">
+      <DependentUpon>ucPlayBrief.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSearchResultPanel.resx">
+      <DependentUpon>ucSearchResultPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleSearchResult.resx">
+      <DependentUpon>ucSingleSearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleSearchResultPanel.resx">
+      <DependentUpon>ucSingleSearchResultPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleRealtimeTask.resx">
+      <DependentUpon>ucSingleRealtimeTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleHistoryTask.resx">
+      <DependentUpon>ucSingleHistoryTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UILogics\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddRealTask.resx">
+      <DependentUpon>FormAddRealTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSettingServer.resx">
+      <DependentUpon>FormSettingServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormSingleTask.resx">
+      <DependentUpon>FormSingleTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\FormAddFtpTask.resx">
+      <DependentUpon>FormAddFtpTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleDrawImageWnd.resx">
+      <DependentUpon>ucSingleDrawImageWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleRealtimePlayWnd.resx">
+      <DependentUpon>ucSingleRealtimePlayWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSinglePlayWnd.resx">
+      <DependentUpon>ucSinglePlayWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTaskAdd.resx">
+      <DependentUpon>ucTaskAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFileSystemBase.resx">
+      <DependentUpon>ucFileSystemBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucFtpFileSystem.resx">
+      <DependentUpon>ucFtpFileSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucLocalFileSystem.resx">
+      <DependentUpon>ucLocalFileSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormAddLocalTask.resx">
+      <DependentUpon>FormAddLocalTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrafficFluxSearch.resx">
+      <DependentUpon>ucTrafficFluxSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrafficFluxStatisticSearch.resx">
+      <DependentUpon>ucTrafficFluxStatisticSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucUploadWnd.resx">
+      <DependentUpon>ucUploadWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucTrafficEventAnalyseSetting.resx">
+      <DependentUpon>ucTrafficEventAnalyseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucPersonSearchSetting.resx">
+      <DependentUpon>ucPersonSearchSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucVehicleSearchSetting.resx">
+      <DependentUpon>ucVehicleSearchSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainNew.resx">
+      <DependentUpon>FormMainNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucSingleBriefPlayWnd.resx">
+      <DependentUpon>ucSingleBriefPlayWnd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormGisMap.resx">
+      <DependentUpon>FormGisMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ucCrowdAnalyseSetting.resx">
+      <DependentUpon>ucCrowdAnalyseSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataModels\IVX.DataModel\IVX.DataModel.csproj">
+      <Project>{8E287254-C9B9-49F0-8D3B-3CD59C5DBEFA}</Project>
+      <Name>IVX.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\MyLog4Net\MyLog4Net.csproj">
+      <Project>{F0742249-3A6A-4458-86DE-372CF526A4BD}</Project>
+      <Name>MyLog4Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\WinFormAppUtil\WinFormAppUtil.csproj">
+      <Project>{94DC7060-2442-4E4F-A951-CE649564FCC6}</Project>
+      <Name>WinFormAppUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IVX.Live.ViewModel\IVX.Live.ViewModel.csproj">
+      <Project>{47570b4e-f15c-46ed-b999-b634e48caa91}</Project>
+      <Name>IVX.Live.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\305_Close_24x24_72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ui.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxbriefocxLib">
+      <Guid>{E3DA241E-B7EF-4EC2-83F7-84198C996470}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxChannelDrawingLib">
+      <Guid>{3178D13E-5BC2-43FD-81D0-22C5F14FFDF3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxfileuploadLib">
+      <Guid>{D026BCEC-A77C-44A7-92B3-FDDC81E07D55}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AxvodocxLib">
+      <Guid>{B31EB80E-1382-4727-ABCE-DB043EF88A1E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="briefocxLib">
+      <Guid>{E3DA241E-B7EF-4EC2-83F7-84198C996470}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="ChannelDrawingLib">
+      <Guid>{3178D13E-5BC2-43FD-81D0-22C5F14FFDF3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="fileuploadLib">
+      <Guid>{D026BCEC-A77C-44A7-92B3-FDDC81E07D55}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="vodocxLib">
+      <Guid>{B31EB80E-1382-4727-ABCE-DB043EF88A1E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bk.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\播放5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\截图1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\截图2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\截图3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\截图4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\截图5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\停止5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\暂停5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bocom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\任务管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\任务管理1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\任务管理2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\案件管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\视频播放.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统配置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\智能检索.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\窗口化.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\关闭.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\最大化.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\最小化.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IVX.ico" />
+    <None Include="Resources\ZoomHS.png" />
+    <None Include="Resources\add__analyse_24.png" />
+    <None Include="Resources\remove_analyse_24.png" />
+    <None Include="Resources\前一帧5.png" />
+    <None Include="Resources\前一帧4.png" />
+    <None Include="Resources\前一帧3.png" />
+    <None Include="Resources\前一帧2.png" />
+    <None Include="Resources\前一帧1.png" />
+    <None Include="Resources\face.png" />
+    <None Include="Resources\转到以图搜图5.png" />
+    <None Include="Resources\转到以图搜图4.png" />
+    <None Include="Resources\转到以图搜图3.png" />
+    <None Include="Resources\转到以图搜图2.png" />
+    <None Include="Resources\转到以图搜图1.png" />
+    <None Include="Resources\下.png" />
+    <None Include="Resources\UnDensity.png" />
+    <None Include="Resources\Density.png" />
+    <None Include="Resources\储存5.png" />
+    <None Include="Resources\储存4.png" />
+    <None Include="Resources\储存3.png" />
+    <None Include="Resources\储存2.png" />
+    <None Include="Resources\储存1.png" />
+    <None Include="Resources\导出5.png" />
+    <None Include="Resources\导出4.png" />
+    <None Include="Resources\导出3.png" />
+    <None Include="Resources\导出2.png" />
+    <None Include="Resources\导出1.png" />
+    <None Include="Resources\浓缩播放5.png" />
+    <None Include="Resources\浓缩播放4.png" />
+    <None Include="Resources\浓缩播放3.png" />
+    <None Include="Resources\浓缩播放2.png" />
+    <None Include="Resources\浓缩播放1.png" />
+    <None Include="Resources\查看详情4.png" />
+    <None Include="Resources\查看详情3.png" />
+    <None Include="Resources\查看详情2.png" />
+    <None Include="Resources\查看详情1.png" />
+    <None Include="Resources\查看详情5.png" />
+    <None Include="Resources\时间框叠加5.png" />
+    <None Include="Resources\时间框叠加4.png" />
+    <None Include="Resources\时间框叠加3.png" />
+    <None Include="Resources\时间框叠加2.png" />
+    <None Include="Resources\时间框叠加1.png" />
+    <None Include="Resources\区域叠加5.png" />
+    <None Include="Resources\区域叠加4.png" />
+    <None Include="Resources\区域叠加3.png" />
+    <None Include="Resources\区域叠加2.png" />
+    <None Include="Resources\区域叠加1.png" />
+    <None Include="Resources\快退5.png" />
+    <None Include="Resources\快退4.png" />
+    <None Include="Resources\快退3.png" />
+    <None Include="Resources\快退2.png" />
+    <None Include="Resources\快退1.png" />
+    <None Include="Resources\快进5.png" />
+    <None Include="Resources\快进4.png" />
+    <None Include="Resources\快进3.png" />
+    <None Include="Resources\快进2.png" />
+    <None Include="Resources\快进1.png" />
+    <None Include="Resources\loading_icon_small.gif" />
+    <None Include="Resources\宝马.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

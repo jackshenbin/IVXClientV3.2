@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AutoUpdate>
+  <MainProgramPath>xxx.exe</MainProgramPath>
+  <MainVersion>1.0.0.0</MainVersion>
+  <UpdateType>2</UpdateType>
+  <UpdateURL>http://www.autoupdate.com/Update/</UpdateURL>
+  <IsShowNoNewVersion>1</IsShowNoNewVersion>
+  <IsShowErrorURL>1</IsShowErrorURL>
+</AutoUpdate>

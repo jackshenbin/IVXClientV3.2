@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E287254-C9B9-49F0-8D3B-3CD59C5DBEFA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IVX.DataModel</RootNamespace>
+    <AssemblyName>IVX.DataModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\DataModel.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\IVX_Pro_Clinet_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\DataModel.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\ThirdParty\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\..\..\ThirdParty\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BeginSearchInfo.cs" />
+    <Compile Include="FaceControlInfo.cs" />
+    <Compile Include="SearchParaFace.cs" />
+    <Compile Include="SearchResultFace.cs" />
+    <Compile Include="SubscribeInfo.cs" />
+    <Compile Include="BlackList.cs" />
+    <Compile Include="FtpInfo.cs" />
+    <Compile Include="QueueBuffer.cs" />
+    <Compile Include="FaceAlarmInfoV3_1.cs" />
+    <Compile Include="TrafficeEventChannelParamInfo.cs" />
+    <Compile Include="CrowdStatistic.cs" />
+    <Compile Include="DynamicTrafficPlateInfo.cs" />
+    <Compile Include="TrafficePlateInfo.cs" />
+    <Compile Include="TrafficFluxHistoryInfo.cs" />
+    <Compile Include="TrafficFluxStatisticInfo.cs" />
+    <Compile Include="TransEvnetInfo.cs" />
+    <Compile Include="AnalysePlanInfo.cs" />
+    <Compile Include="AnalyseVideoFileImportInfo.cs" />
+    <Compile Include="BreakRegion.cs" />
+    <Compile Include="BriefMouseClickInfo.cs" />
+    <Compile Include="BriefMoveobjInfo.cs" />
+    <Compile Include="BriefPlayParam.cs" />
+    <Compile Include="CameraGroupInfo.cs" />
+    <Compile Include="SearchItemV3_1.cs" />
+    <Compile Include="SearchItemGroup.cs" />
+    <Compile Include="SearchParaV3_1.cs" />
+    <Compile Include="SearchResultRecordV3_1.cs" />
+    <Compile Include="SearchResultRecordTiny.cs" />
+    <Compile Include="SearchResultSummarV3_1.cs" />
+    <Compile Include="ServerInfoV3_1.cs" />
+    <Compile Include="SystemMenu.cs" />
+    <Compile Include="CameraInfoV3_1.cs" />
+    <Compile Include="CameraInfo.cs" />
+    <Compile Include="CaseInfo.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Constant.cs" />
+    <Compile Include="CrowdInfo.cs" />
+    <Compile Include="DesKey.cs" />
+    <Compile Include="DriveWayRegion.cs" />
+    <Compile Include="HumanSuperscale.cs" />
+    <Compile Include="MergeTemplateInfo.cs" />
+    <Compile Include="PlatCameraDetailInfo.cs" />
+    <Compile Include="RealAnalyseInfo.cs" />
+    <Compile Include="RingBuffer.cs" />
+    <Compile Include="RVODFileInfo.cs" />
+    <Compile Include="SceneMark.cs" />
+    <Compile Include="SDKCallException.cs" />
+    <Compile Include="SearchResult.cs" />
+    <Compile Include="ShareDiskVideoFileImportInfo.cs" />
+    <Compile Include="DownloadInfo.cs" />
+    <Compile Include="FilterCondition.cs" />
+    <Compile Include="ICacheItem.cs" />
+    <Compile Include="IVAResultRecord.cs" />
+    <Compile Include="StreamVAFileInfo.cs" />
+    <Compile Include="LocalVAFileInfo.cs" />
+    <Compile Include="LocalVideoFileImportInfo.cs" />
+    <Compile Include="LogDetailCat.cs" />
+    <Compile Include="LoginToken.cs" />
+    <Compile Include="LogRecord.cs" />
+    <Compile Include="LogResInfo.cs" />
+    <Compile Include="LogSearchParam.cs" />
+    <Compile Include="LogSearchResultSummary.cs" />
+    <Compile Include="Miscellaneous.cs" />
+    <Compile Include="NotifyPropertyChangedModel.cs" />
+    <Compile Include="PageInfo.cs" />
+    <Compile Include="PageInfoBase.cs" />
+    <Compile Include="PassLine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NetStoreVideoImportInfo.cs" />
+    <Compile Include="RemoteVideoFileImportInfo.cs" />
+    <Compile Include="SearchParaBase.cs" />
+    <Compile Include="SearchResultPropertyAttribute.cs" />
+    <Compile Include="ServerInfo.cs" />
+    <Compile Include="SortInfo.cs" />
+    <Compile Include="TargitAnalyseResult.cs" />
+    <Compile Include="TaskInfo.cs" />
+    <Compile Include="TaskBriefMSSInfoV3_1.cs" />
+    <Compile Include="SelectedPictureParam.cs" />
+    <Compile Include="TaskStroreInfoV3_1.cs" />
+    <Compile Include="TaskType.cs" />
+    <Compile Include="TaskUnitAnalyseStatus.cs" />
+    <Compile Include="TimeRange.cs" />
+    <Compile Include="UIEvent.cs" />
+    <Compile Include="UIFunctionEnum.cs" />
+    <Compile Include="TrafficeEventInfoV3_1.cs" />
+    <Compile Include="UserGroupInfo.cs" />
+    <Compile Include="UserInfo.cs" />
+    <Compile Include="VBrandInfo.cs" />
+    <Compile Include="VehicleTypeInfo.cs" />
+    <Compile Include="VideoAnalyseInfo.cs" />
+    <Compile Include="VideoAnalyseSectionInfo.cs" />
+    <Compile Include="VideoPictureResource.cs" />
+    <Compile Include="VideoSupplierDeviceInfo.cs" />
+    <Compile Include="VodInfo.cs" />
+    <Compile Include="CompareImageInfo.cs" />
+    <Compile Include="LogSearchResultInfo.cs" />
+    <Compile Include="ResourceUpdateInfo.cs" />
+    <Compile Include="NormalSearchResultRecord.cs" />
+    <Compile Include="CarSearchResultRecord.cs" />
+    <Compile Include="FaceSearchResultRecord.cs" />
+    <Compile Include="CompareSearchResultRecord.cs" />
+    <Compile Include="BehaviorInfo.cs" />
+    <Compile Include="PeopleCountAlarmInfo.cs" />
+    <Compile Include="RealtimeCameraInfo.cs" />
+    <Compile Include="TaskInfoV3_1.cs" />
+    <Compile Include="UploadTaskInfoV3_1.cs" />
+    <Compile Include="TaskProgressInfoV3_1.cs" />
+    <Compile Include="NetStoreInfoV3_1.cs" />
+    <Compile Include="TaskMSSInfoV3_1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libs\MyLog4Net\MyLog4Net.csproj">
+      <Project>{F0742249-3A6A-4458-86DE-372CF526A4BD}</Project>
+      <Name>MyLog4Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{47570B4E-F15C-46ED-B999-B634E48CAA91}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IVX.Live.ViewModel</RootNamespace>
+    <AssemblyName>IVX.Live.ViewModel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\IVX_Pro_Clinet_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\IVX_Pro_Clinet_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Define">
+      <HintPath>..\..\..\ThirdParty\cfgLib\Define.dll</HintPath>
+    </Reference>
+    <Reference Include="FuncCtrl">
+      <HintPath>..\..\..\ThirdParty\cfgLib\FuncCtrl.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Log, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\cfgLib\Log.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\..\IVX_Pro_Clinet_Release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\..\..\IVX_Pro_Clinet_Release\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="SocketLib">
+      <HintPath>..\..\..\ThirdParty\cfgLib\SocketLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BehaviorEventViewModel.cs" />
+    <Compile Include="BlackListViewModel.cs" />
+    <Compile Include="CrowdRealtimeViewModel.cs" />
+    <Compile Include="CrowdReportViewModel.cs" />
+    <Compile Include="CrowdViewModel.cs" />
+    <Compile Include="FaceAlarmControlViewModel.cs" />
+    <Compile Include="FaceAlarmSearchViewModel.cs" />
+    <Compile Include="FaceHistorySearchViewModel.cs" />
+    <Compile Include="SubscribeViewModel.cs" />
+    <Compile Include="WSDataReceiveViewModel.cs" />
+    <Compile Include="Freamwork\Container.cs" />
+    <Compile Include="EditHistoryAnalyseParamViewModel.cs" />
+    <Compile Include="LogViewModel.cs" />
+    <Compile Include="RealtimeTaskManagementMAViewModel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReBootSerViewModel.cs" />
+    <Compile Include="SearchMoveObjectViewModel.cs" />
+    <Compile Include="DataReceiveViewModel.cs" />
+    <Compile Include="SelectCompareParamViewModel.cs" />
+    <Compile Include="SearchViewModelBase.cs" />
+    <Compile Include="SearchResultPanelViewModel.cs" />
+    <Compile Include="SelectSearchItemViewModel.cs" />
+    <Compile Include="SingleSearchResultPanelViewModel.cs" />
+    <Compile Include="SettingViewModel.cs" />
+    <Compile Include="GisMapViewModel.cs" />
+    <Compile Include="FtpFileSystemViewModel.cs" />
+    <Compile Include="MainNewViewModel.cs" />
+    <Compile Include="ExportListViewModel.cs" />
+    <Compile Include="PlayHistoryViewModel.cs" />
+    <Compile Include="PlayBriefViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoginViewModel.cs" />
+    <Compile Include="RealPlayViewModel.cs" />
+    <Compile Include="SingleRealtimePlayWndViewModel.cs" />
+    <Compile Include="SingleHistoryTaskViewModel.cs" />
+    <Compile Include="SingleTaskViewModel.cs" />
+    <Compile Include="TaskAddRealViewModel.cs" />
+    <Compile Include="TaskAddViewModel.cs" />
+    <Compile Include="TaskManagementMAViewModel.cs" />
+    <Compile Include="TrafficEventViewModel.cs" />
+    <Compile Include="TrafficFluxHistoryViewModel.cs" />
+    <Compile Include="TrafficFluxStatisticViewModel.cs" />
+    <Compile Include="UserViewModel.cs" />
+    <Compile Include="ZipFileViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataModels\IVX.DataModel\IVX.DataModel.csproj">
+      <Project>{8e287254-c9b9-49f0-8d3b-3cd59c5dbefa}</Project>
+      <Name>IVX.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\MyLog4Net\MyLog4Net.csproj">
+      <Project>{f0742249-3a6a-4458-86de-372cf526a4bd}</Project>
+      <Name>MyLog4Net</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libs\WinFormAppUtil\WinFormAppUtil.csproj">
+      <Project>{94dc7060-2442-4e4f-a951-ce649564fcc6}</Project>
+      <Name>WinFormAppUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\IVX.Live.CommServices\IVX.Live.CommServices.csproj">
+      <Project>{c9696b81-0f5f-4166-8459-9acfb0dc6b8e}</Project>
+      <Name>IVX.Live.CommServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\IVX.Live.ConfigServices\IVX.Live.ConfigServices.csproj">
+      <Project>{5ddbe791-c54d-404e-91c8-a97c09c3b193}</Project>
+      <Name>IVX.Live.ConfigServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\IVX.Live.DataReceiveServices\IVX.Live.DataReceiveServices.csproj">
+      <Project>{5c273012-20d9-47de-b30f-4cb9dee5eda8}</Project>
+      <Name>IVX.Live.DataReceiveServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\IVX.Live.SearchServices\IVX.Live.SearchServices.csproj">
+      <Project>{c8c59116-c6bf-4e64-9ed9-5ccd43e802fd}</Project>
+      <Name>IVX.Live.SearchServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\IVX.Live.WSDataReceiveServices\IVX.Live.WSDataReceiveServices.csproj">
+      <Project>{ce0a723a-aa4f-4e87-b1de-f08bc7aa3c0c}</Project>
+      <Name>IVX.Live.WSDataReceiveServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

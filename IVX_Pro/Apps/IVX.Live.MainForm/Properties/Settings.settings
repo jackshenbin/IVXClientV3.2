@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IVX.Live.MainForm.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UploadAbility" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="LocalCommIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="ServerIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="GisMapPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">e:\map\maptype-tms.html</Value>
+    </Setting>
+    <Setting Name="behaviourDataReceivePort" Type="System.UInt32" Scope="User">
+      <Value Profile="(Default)">10124</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SavePassword" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="trafficEventDataReceivePort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10129</Value>
+    </Setting>
+    <Setting Name="AlarmReceivePort" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10134</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

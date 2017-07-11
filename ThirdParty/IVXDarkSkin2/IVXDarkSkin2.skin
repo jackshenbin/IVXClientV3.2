@@ -1,0 +1,10 @@
+﻿<SkinItems version="1.0" application="SkinEditor" assembly="IVXDarkSkin2" class="" extranamespace="">
+  <Item>
+    <ItemName>MySkin_IVXDarkSkin1</ItemName>
+    <TemplateName>IVXDarkSkin</TemplateName>
+  </Item>
+  <Item>
+    <ItemName>IVXClientSkin</ItemName>
+    <TemplateName>IVXDarkSkin</TemplateName>
+  </Item>
+</SkinItems>
