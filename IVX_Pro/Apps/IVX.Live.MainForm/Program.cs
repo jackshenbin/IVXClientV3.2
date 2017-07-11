@@ -12,7 +12,7 @@ namespace IVX.Live.MainForm
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
 
             Application.EnableVisualStyles();
@@ -27,8 +27,8 @@ namespace IVX.Live.MainForm
 
             MyLog4Net.Container.Instance.Log.DebugWithDebugView("FormMainNew");
 
-            //Application.Run(new FormMainNew());
-            Application.Run(new FormOP());
+            Application.Run(new FormMainNew());
+            //Application.Run(new FormOP());
             //Application.Run(new Form2());
             
             //Application.Run(new IVX.Live.MainForm.View.FormLogin());
